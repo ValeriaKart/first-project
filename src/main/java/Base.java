@@ -9,6 +9,15 @@ public class Base {
         //Сохраняем в переменную operationType значение типа операции из консоли, возвращенное методом nextInt()
         int operationType = in.nextInt();
 
+        if (operationType == 1) {
+            Calculator calculator = new Calculator(in);
+            calculator.start();
+        } else if (operationType == 2) {
+
+        } else {
+            System.out.println("Операция не поддерживается. Выберите 1 - калькулятор или 2 - поиск элемента в массиве");
+        }
+
 
 
         in.close();
