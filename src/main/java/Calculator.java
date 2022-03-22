@@ -17,23 +17,17 @@ public class Calculator {
         /*Условие для выбора операции с введенными числами. Если "+" - сложение,
         "*" - умножение, "-" - вычитание, "\" - деление. Иначе сообщение, что операция не поддерживается*/
     switch (operation){
-        case "+":  System.out.printf("Результат = %.4f", addition(num1, num2));
+        case "+":  System.out.printf("Результат = %.4f", add(num1, num2));
             break;
         case "*": System.out.printf("Результат = %.4f", multiply(num1, num2));
             break;
+        case "-": System.out.printf("Результат = %.4f", subtract(num1, num2));
+            break;
+        case "/": System.out.printf("Результат = %.4f", divide(num1, num2));
         default: System.out.println("Введенная операция не поддерживается. Попробуйте снова, используя знаки +, *, -, /.");
         break;
     }
 
-
-
-        if (operationType.equals("+")) {
-        System.out.printf("Результат = %.4f", addition(num1, num2));
-    } else if (operationType.equals("*")) {
-        System.out.printf("Результат = %.4f", multiply(num1, num2));
-    } else {
-        System.out.println("Введенная операция не поддерживается. Попробуйте снова, используя знаки + или *.");
-    }
         in.close();
 
     /**
@@ -42,7 +36,7 @@ public class Calculator {
      * @param number2 - второе число в виде десятичной дроби с разделителем запятой
      * @return метод возвращает результат сложения двух чисел (number1 и number2)
      */
-    public double addition(double number1, double number2) {
+    public double add(double number1, double number2) {
 
         return number1 + number2;
     }
@@ -57,5 +51,32 @@ public class Calculator {
 
         return number1 * number2;
 
+    }
+
+    /**
+     *
+     * @param number1 - первое число в виде десятичной дроби с разделителем запятой
+     * @param number2 - второе число в виде десятичной дроби с разделителем запятой
+     * @return метод возвращает результат вычитания двух чисел (number1 и number2)
+     */
+    public double subtract(double number1, double number2) {
+
+        return number1 - number2;
+
+    }
+
+    /**
+     *
+     * @param number1 - первое число в виде десятичной дроби с разделителем запятой
+     * @param number2 - второе число в виде десятичной дроби с разделителем запятой
+     * @return метод возвращает результат деления двух чисел (number1 и number2), если второе не равно 0
+     */
+    public double divide(double number1, double number2) {
+
+        if (number2 == 0){
+            System.out.println("На ноль делить нельзя!");
+        }else{
+            return number1 / number2;
+        }
     }
 }
