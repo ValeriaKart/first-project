@@ -1,3 +1,5 @@
+package task_4;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringJoiner;

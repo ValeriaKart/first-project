@@ -1,3 +1,7 @@
+package task_4;
+
+import task_4.Array;
+
 import java.util.Scanner;
 
 public class Base {
