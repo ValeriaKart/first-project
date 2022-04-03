@@ -1,6 +1,4 @@
-package task_4;
-
-import task_4.Array;
+package task_1;
 
 import java.util.Scanner;
 

@@ -1,8 +1,6 @@
-package task_4;
+package task_1;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class Array {
   private final Scanner in;
