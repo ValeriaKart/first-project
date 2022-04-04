@@ -16,7 +16,7 @@ public class Base {
   
     System.out.println("Сгенерированный массив случайных целых чисел:\n" + Arrays.toString(array));
     
-     int maxNegativeValue = 0;
+     int maxNegativeValue = -10;
      int minPositiveValue = 10;
      int maxNegativeValueIndex = 0;
      int minPositiveValueIndex = 0;
@@ -24,7 +24,7 @@ public class Base {
    // Перебор массива для поиска максимального отрицательного и минимального положительного чисел и их индексов
     for (int i = 0; i < array.length; i++) {
       if(array[i] < 0){
-        if(Math.abs(array[i]) > Math.abs(maxNegativeValue)){
+        if(array[i] > maxNegativeValue){
           maxNegativeValue = array[i];
           maxNegativeValueIndex = i;
         }
