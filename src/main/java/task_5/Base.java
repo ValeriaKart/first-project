@@ -2,10 +2,7 @@ package task_5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Base {
   public static void main(String[] args) throws FileNotFoundException {
@@ -22,6 +19,28 @@ public class Base {
     }
     wordsList.sort(Comparator.naturalOrder());
     System.out.println("Слова из файла в алфавитном порядке: " + wordsList);
+  
+    HashMap<String, Integer> wordsQuantity = new HashMap<>();
     
+    for(int i = 0; i < wordsList.size(); i++){
+      if(wordsQuantity.containsKey(wordsList.get(i))){
+        wordsQuantity.put(wordsList.get(i), wordsQuantity.get(wordsList.get(i)) + 1);
+      }else{
+        wordsQuantity.put(wordsList.get(i), 1);
+      }
+    }
+    System.out.println("Список слов и их количество в файле: " + wordsQuantity);
+    
+  
+    Integer maxValue2 = 0;
+    String maxUsedWord = null;
+    
+     for (Map.Entry<String, Integer> pairKeyValue : wordsQuantity.entrySet()) {
+     if (pairKeyValue.getValue() > maxValue2){
+       maxUsedWord = pairKeyValue.getKey();
+       maxValue2 = pairKeyValue.getValue();
+     }
+    }
+    System.out.println("Наиболее часто втречающееся слово: " + maxUsedWord + ". Встречается в файле " + maxValue2 + " раз.");
   }
 }
