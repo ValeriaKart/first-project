@@ -1,9 +1,10 @@
 package Calculator;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Base {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws DivideByZeroException {
     double num1;
     double num2;
     
@@ -45,6 +46,7 @@ public class Base {
         return;
     }
     System.out.printf("Результат = %.4f", result);
-    in.close();
+    
+      in.close();
   }
 }
