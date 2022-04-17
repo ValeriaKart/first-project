@@ -1,6 +1,5 @@
-package Calculator;
+package calculator;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Base {
@@ -47,6 +46,6 @@ public class Base {
     }
     System.out.printf("Результат = %.4f", result);
     
-      in.close();
+    in.close();
   }
 }
